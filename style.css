@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-white: #fff;
+    --color-light: #f4f4f4;
+    --color-dark: #525252;
+    --color-black: #141415;
+    --color-primary: #1ea4f2;
+    --color-primary-light: hsl(14, 89%, 53%, 12%);
+    --color-succes: #29f5a6;
+    --color-warning: #ffce31;
+
+    --transition: all 300ms ease;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--color-white);
+    color: var(--color-dark);
+    max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-black);
+    line-height: 1.2;
+}
+
+/* ============ HEADER ============ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: var(--color-white);
+    z-index: 1000;
+    border-right: 1px solid var(--color-light);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+/* header active */
+header.active {
+    width: 54px;
+}
+
+header .menuToggle {
+    position: absolute;
+    top: 7px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .menuToggle::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(-10px);
+    box-shadow: 0 10px #555;
+    transition: .5s;
+}
+
+header .menuToggle::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(10px);
+    transition: .5s;
+}
+
+header.active .menuToggle::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #555;
+}
+
+header.active .menuToggle::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+header .nav-logo {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-light);
+}
+
+header ul {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border-bottom: 1px solid var(--color-light);
+}
+
+header ul li {
+    width: 250px;
+    height: 50px;
+    border-bottom: 1px solid var(--color-light);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+header ul li i {
+    font-size: 1.5rem;
+    color: var(--color-black);
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+header ul li a {
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: var(--color-black);
+    transition: var(--transition);
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+header .nav-social {
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    width: 250px;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .nav-social a {
+    font-size: 2rem;
+    color: var(--color-black);
+}
+
+/* ============ HOME ============ */
+
+.home {
+    position: absolute;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    background: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+/* home active */
+.home.active {
+    width: calc(100% - 54px);
+    left: 54px;
+}
+
+.home h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.home-bx {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background: var(--color-white);
+}
+
+.home-bx h1 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.home-bx ul {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 100%;
+    height: max-content;
+}
+
+.home-bx ul li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.home-bx ul li i {
+    font-size: 1.5rem;
+    color: var(--color-black);
+}
+
+.home-bx ul li a {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    color: var(--color-black);
+    cursor: default;
+}
+
+/* ============ ANGGOTA ============ */
+
+.anggota {
+    position: absolute;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 120vh;
+    background: var(--color-white);
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+/* anggota active */
+.anggota.active {
+    width: calc(100% - 54px);
+    left: 54px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.anggota-bx {
+    width: 250px;
+    height: 150px;
+    border: 1px solid var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anggota-bx-title {
+    width: 100%;
+    height: 74px;
+    border-bottom: 1px solid var(--color-light);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.anggota-bx-title img {
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-dark);
+}
+
+.anggota-bx-title h5 {
+    margin-left: 1rem;
+}
+
+.anggota-bx-description {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.anggota-bx-description p:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.anggota-bx-description p:nth-child(1) i {
+    font-size: 1.5rem;
+    color: var(--color-black);
+}
+
+.anggota-bx-description p:nth-child(1) span {
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin-left: 1rem;
+}
+
+.anggota-bx-description p:nth-child(2) {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+
+/* ============ JADWAL ============ */
+
+.jadwal {
+    position: absolute;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    background: var(--color-light);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+/* jadwal active */
+.jadwal.active {
+    width: calc(100% - 54px);
+    left: 54px;
+}
+
+.jadwal table {
+    width: 90%;
+    height: 90vh;
+    background: var(--color-white);
+    cursor: default;
+}
+
+.jadwal table thead tr th {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: var(--color-black);
+    background: var(--color-light);
+}
+
+.jadwal table tbody tr td {
+    font-size: 1.2rem;
+    text-align: center;
+    background: var(--color-light);
+}
+
+.jadwal-bx {
+    width: 200px;
+    height: 55px;
+    background: var(--color-white);
+    position: relative;
+    display: none;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.jadwal-bx.active {
+    height: 250px;
+}
+
+.jadwal-bx div {
+    width: 100%;
+}
+
+.jadwal-bx div:hover {
+    background: var(--color-primary);
+}
+
+.jadwal-bx div:hover h2 {
+    color: var(--color-white);
+}
+
+.jadwal-bx h2 {
+    margin: 1rem;
+}
+
+.jadwal-bx ul {
+    position: absolute;
+    top: 50px;
+    left: 1rem;
+}
+
+.jadwal-bx ul li {
+    list-style: circle;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+/* ============ JADWAL ============ */
+
+.piket {
+
+    position: absolute;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    background: var(--color-light);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    gap: 1.5rem;
+}
+
+/* piket active */
+.piket.active {
+    width: calc(100% - 54px);
+    left: 54px;
+}
+
+.piket-bx {
+    width: 300px;
+    height: 55px;
+    background: var(--color-white);
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.piket-bx.active {
+    height: 350px;
+}
+
+.piket-bx div {
+    width: 100%;
+}
+
+.piket-bx div:hover {
+    background: var(--color-primary);
+}
+
+.piket-bx div:hover h1 {
+    color: var(--color-white);
+}
+
+.piket-bx h1 {
+    margin: 1rem;
+}
+
+.piket-bx ul {
+    position: absolute;
+    top: 50px;
+    left: 1rem;
+}
+
+.piket-bx ul li {
+    list-style: circle;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border-bottom: 1.5px solid var(--color-light);
+}
+
+
+/* with small device */
+@media screen and (max-width: 430px) {
+
+    .home,
+    .anggota,
+    .jadwal,
+    .piket {
+        width: calc(100% - 54px);
+        left: 54px;
+    }
+
+    .anggota,
+    .anggota.active {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    .jadwal {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .jadwal table {
+        display: none;
+    }
+
+    .jadwal-bx {
+        display: flex;
+    }
+
+    .piket {
+        flex-direction: column;
+    }
+
+
+}
+
+/* with medium device */
+/* @media screen and (max-width: 820px) {
+    .home,
+    .anggota,
+    .jadwal {
+        width: calc(100% - 54px);
+        left: 54px;
+    }
+    .anggota,.anggota.active {
+        grid-template-columns: 1fr 1fr;
+    }
+    .jadwal table {
+        display: none;
+    }
+    .jadwal {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
+    .jadwal-bx {
+        display: flex;
+    }
+} */
