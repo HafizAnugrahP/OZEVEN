@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZEVEN-CLASS-WEBSITE</title>
+    <title>OZEVEN-CLASS-WEBSITE-V0.1</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
         integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
@@ -20,20 +20,22 @@
         </div>
 
         <ul>
-            <li><i class="ri-home-2-fill"></i><a href="#home" id="hhome">Home</a></li>
-            <li><i class="ri-user-fill"></i><a href="#anggota" id="aanggota">Anggota</a></li>
-            <li><i class="ri-article-line"></i><a href="#anggota" id="jjadwal">Jadwal</a></li>
-            <li><i class="ri-article-line"></i><a href="#anggota" id="ppiket">Piket</a></li>
+            <li><i class="ri-home-2-fill"></i><a>Home</a></li>
+            <li><i class="ri-user-fill"></i><a>Anggota</a></li>
+            <li><i class="ri-article-line"></i><a>Jadwal</a></li>
+            <li><i class="ri-article-line"></i><a>Piket</a></li>
+            <li><i class="ri-file-warning-line"></i><a>Baru</a></li>
         </ul>
 
         <div class="nav-social">
             <a href="https://www.instagram.com/ozev.en/"><i class="ri-instagram-fill"></i></a>
             <h2>OZEVEN</h2>
+            <p>V 0.1</p>
         </div>
     </header>
 
     <!-- ============ HOME ============ -->
-    <section class="home" id="home">
+    <section class="home">
         <h1>OZEVEN</h1>
 
         <div class="home-bx">
@@ -47,7 +49,7 @@
     </section>
 
     <!-- ============ ANGGOTA ============ -->
-    <section class="anggota" id="anggota">
+    <section class="anggota">
         <div class="anggota-bx">
             <div class="anggota-bx-title">
                 <img src="" alt="">
@@ -436,7 +438,7 @@
     </section>
 
     <!-- ============ JADWAL ============ -->
-    <section class="jadwal" id="jadwal">
+    <section class="jadwal">
         <table>
             <thead>
                 <tr>
@@ -508,7 +510,7 @@
                 <tr>
                     <td>11.35 - 12.20</td>
                     <td>Sejarah</td>
-                    <td>Informatika</td>
+                    <td>Bhs. Indonesia</td>
                     <td>Bhs. Indonesia</td>
                     <td>MAT</td>
                     <td>Informatika</td>
@@ -524,7 +526,7 @@
                 <tr>
                     <td>12.50 - 13.30</td>
                     <td>Sejarah</td>
-                    <td>Informatika</td>
+                    <td>Bhs. Indonesia</td>
                     <td>Bhs. Indonesia</td>
                     <td>MAT</td>
                     <td>Informatika</td>
@@ -534,7 +536,7 @@
                     <td>Seni Budaya</td>
                     <td>PPKN</td>
                     <td>MAT</td>
-                    <td>Bhs. Indonesia</td>
+                    <td>Informatika</td>
                     <td>Informatika</td>
                 </tr>
                 <tr>
@@ -542,7 +544,7 @@
                     <td>Seni Budaya</td>
                     <td>PPKN</td>
                     <td>MAT</td>
-                    <td>Bhs. Indonesia</td>
+                    <td>Informatika</td>
                 </tr>
             </tbody>
         </table>
@@ -566,7 +568,7 @@
                 <li>BK</li>
                 <li>PAI</li>
                 <li>BIG TL</li>
-                <li>Informatika</li>
+                <li>Bhs. Indonesia</li>
                 <li>PPKN</li>
             </ul>
         </div>
@@ -590,7 +592,7 @@
                 <li>PJOK</li>
                 <li>Bhs. Inggris</li>
                 <li>MAT</li>
-                <li>Bhs. Indonesia</li>
+                <li>Informatika</li>
             </ul>
         </div>
         <div class="jadwal-bx">
@@ -605,7 +607,8 @@
         </div>
     </section>
 
-    <section class="piket" id="piket">
+    <!-- ============ PIKET ============ -->
+    <section class="piket">
         <div class="piket-bx">
             <div class="pt-title">
                 <h1>SENIN</h1>
@@ -678,7 +681,42 @@
         </div>
     </section>
 
+    <!-- ============ NEWS ============ -->
+    <section class="news">
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="img/update1.1.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/update1.2.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/update1.3.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/update1.4.png" alt="">
+                </div>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="ri-arrow-left-line"></i></button>
+            <button id="next"><i class="ri-arrow-right-line"></i></button>
+        </div>
+        <div class="news-text">
+            <h1>Apa Yang Baru !!!</h1>
+            <p>Web Versi Terbaru Datang Perminggu In sya allah</p>  
+        </div>
+    </section>
+
     <script src="script.js"></script>
+    </script>
 </body>
 
 </html>
